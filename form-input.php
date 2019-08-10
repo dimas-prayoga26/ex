@@ -3,7 +3,6 @@
 <html>
 <head>
 	<title>TAMBAH SISWA PIKET RPL2</title>
-	<link rel="stylesheet" type="text/css" href="disain_input.css">
 </head>
 <body>
 	<h1>TAMBAH SISWA PIKET RPL2</h1>
@@ -12,27 +11,27 @@
 			<tr class="senin">
 				<td>SENIN</td>
 				<td>:</td>
-				<td><input type="text" name="snn" placeholder="senin"></td>
+				<td><input type="text" name="snn" placeholder="jadwal hari senin"></td>
 			</tr>
 			<tr class="selasa">
 				<td>SELASA</td>
 				<td>:</td>
-				<td><input type="text" name="sla" placeholder="selasa"></td>
+				<td><input type="text" name="sla" placeholder="jadwal hari selas"></td>
 			</tr>
 			<tr class="rabu">
 				<td>RABU</td>
 				<td>:</td>
-				<td><input type="text" name="rbu" placeholder="rabu"></td>
+				<td><input type="text" name="rbu" placeholder="jadwal hari rabu"></td>
 			</tr>
 			<tr class="kamis">
 				<td>KAMIS</td>
 				<td>:</td>
-				<td><input type="text" name="kms" placeholder="kamis"></td>
+				<td><input type="text" name="kms" placeholder="jadwal hari kamis"></td>
 			</tr>
 			<tr class="jumat">
 				<td>JUM'AT</td>
 				<td>:</td>
-				<td><input type="text" name="jmt" placeholder="jum'at"></td>
+				<td><input type="text" name="jmt" placeholder="jadwalhari jum'at"></td>
 			</tr>
 			<tr>
 				<td></td>

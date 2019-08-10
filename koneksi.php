@@ -1,7 +1,11 @@
 <?php
-$koneksi= mysqli_connect("localhost", "root", "", "latihan_crud");
-if (mysqli_connect_errno())
-	{
-		echo "faild to connect to mysqli ; " . mysqli_connect_error();
-	}
-?>
+$h = 'localhost';
+$u = 'root';
+$p = '';
+$db = 'latihan_crud';
+
+$koneksi = new mysqli($h , $u , $p , $db);
+  if ($koneksi->connect_error) {
+    echo "gagal connection";
+  }
+ ?>

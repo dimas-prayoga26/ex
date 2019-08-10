@@ -2,7 +2,6 @@
 include 'koneksi.php';
 $edit_data = mysqli_query($koneksi,"SELECT * FROM jadwal_piket WHERE id = '".$_GET['id']."'");
 $result = mysqli_fetch_array($edit_data);
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -51,7 +50,7 @@ $result = mysqli_fetch_array($edit_data);
 	<?php
 	include 'koneksi.php';
 	if(isset($_POST['edit']) && $_POST['edit'] == 'simpan'){
-    
+
 	    $id = $_POST['id'];
 		$senin = $_POST['senin'];
 		$selasa = $_POST['selasa'];
@@ -59,7 +58,7 @@ $result = mysqli_fetch_array($edit_data);
 		$kamis = $_POST['kamis'];
 		$jumat = $_POST['jumat'];
 
-		$insert = mysqli_query($koneksi, "UPDATE jadwal_piket SET 
+		$insert = mysqli_query($koneksi, "UPDATE jadwal_piket SET
 								senin='$senin',
 								selasa='$selasa',
 								rabu='$rabu',

@@ -1,3 +1,12 @@
+<?php
+	include 'koneksi.php';
+	session_start();
+	if(!isset($_SESSION['auth'])) {
+		 header('location:login.php');
+	} else {
+		 $username = $_SESSION['auth'];
+	}
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -29,6 +38,12 @@
 	  color: white;
 	}
 </style>
+
+<title>Halaman Sukses Login</title>
+<div align='center'>
+   Selamat Datang, <b><?php echo $username;?></b> <a href="logout.php"><b>Logout</b></a>
+</div>
+
 <h2 align="center">Jadwal Piket</h2><hr /><br />
 <div style="margin: 10px 0">
 	<table id="table" border="1" align="center">
@@ -41,25 +56,12 @@
         <td width="100px">Jum'at</td>
         <td width="125px">Menu Edit</td>
     </tr>
-	
-	<?php 
-		include 'koneksi.php';
-		$no = 1;
-		$select = mysqli_query($koneksi,"select * from jadwal_piket");
-		
-		//kode while punya saya
-		while($hasil = mysqli_fetch_array($select)){
-		
-		//kode while punya kamu
-	//  while($hasil = mysqli_fetch_array($select)){}
-	
-		//coba teliti ada yg beda ga?
-		//ya kmu salah dlm penempatan tanda "}" yg seharusnya ditaro setelah perintah menampilkan...
-		//...seluruh data echo $hasil, jadi penempatannya diatas </table>, coba scroll kebawah...
-		//... lihat kode diatas </table>
-	?> 
-    
-    
+<?php
+	$no = 1;
+	$select = mysqli_query($koneksi,"select * from jadwal_piket");
+
+	while($hasil = mysqli_fetch_array($select)){
+?>
     <tr>
     	<td align="center"><?php echo $no++; ?></td>
         <td><?php echo $hasil['senin']; ?></td>
